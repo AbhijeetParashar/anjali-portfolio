@@ -51,7 +51,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Frontend", "Fullstack", "Mobile", "UI/UX", "AI/ML"];
+const categories = ["All"];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");

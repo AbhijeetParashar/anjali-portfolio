@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import SectionHeader from "@/components/ui/section-header";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
@@ -44,12 +45,12 @@ export default function Contact() {
 
     if (formRef.current) {
       try {
-        // await emailjs.sendForm(
-        //   "service_rf66mi1",
-        //   "template_cy5ngpi",
-        //   formRef.current,
-        //   "jyERb-aqsfASvhpUw"
-        // );
+        await emailjs.sendForm(
+          "service_rf66mi1",
+          "template_cy5ngpi",
+          formRef.current,
+          "jyERb-aqsfASvhpUw"
+        );
 
         toast({
           title: "Message sent 🎉 🎉 🎉",
